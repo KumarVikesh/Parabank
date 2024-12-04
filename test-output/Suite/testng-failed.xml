@@ -8,15 +8,9 @@
     <classes>
       <class name="com.parabank.testcases.TC_RegisterCustomerTest">
         <methods>
-          <include name="verifyRegistration"/>
-          <include name="verifyAppLaunch"/>
-          <include name="verifyLogin"/>
           <include name="setup"/>
-          <include name="verifyInitialAccountDetails"/>
-          <include name="verifyFundsTransfer"/>
+          <include name="verifyTransactionDetailsByAmountAPI"/>
           <include name="tearDown"/>
-          <include name="verifyOpenNewAccount"/>
-          <include name="verifyBillPayment"/>
         </methods>
       </class> <!-- com.parabank.testcases.TC_RegisterCustomerTest -->
     </classes>

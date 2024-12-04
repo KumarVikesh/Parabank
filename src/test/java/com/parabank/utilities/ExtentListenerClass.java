@@ -23,8 +23,8 @@ public class ExtentListenerClass implements ITestListener{
 		reports = new ExtentReports();
 		reports.attachReporter(htmlReporter);
 		
-		htmlReporter.config().setDocumentTitle("Extent Report Listener Demo");
-		htmlReporter.config().setReportName("This is my First Report");
+		htmlReporter.config().setDocumentTitle("ParaBank Report Demo");
+		htmlReporter.config().setReportName("ParaBank Extent Report");
 		htmlReporter.config().setTheme(Theme.DARK);
 	}
 	

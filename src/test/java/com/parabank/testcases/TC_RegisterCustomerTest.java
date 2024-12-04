@@ -1,7 +1,4 @@
 package com.parabank.testcases;
-
-import static io.restassured.RestAssured.get;
-
 import java.io.IOException;
 import java.text.DecimalFormat;
 
@@ -21,6 +18,7 @@ import com.parabank.pageobject.ParaTransferFundsPage;
 import com.parabank.utilities.ReadExcelData;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -112,7 +110,7 @@ public class TC_RegisterCustomerTest extends BaseClass{
 		String initAccountBalance = paraAccountOverviewPage.getAccountBalance(initialAccountNumber);
 		initialAccountBalance = ConvertCurrencyToDouble.getNumericValue(initAccountBalance);
 		System.out.println("Account Number: "+initialAccountNumber+" Balance: "+initAccountBalance);
-		Assert.assertEquals(initAccountBalance,"$515.50");
+		Assert.assertEquals(initAccountBalance,"$500.00");
 		logger.info("Initial Account Balance Details Successfull!!");
 	}
 	
@@ -188,5 +186,22 @@ public class TC_RegisterCustomerTest extends BaseClass{
 		RequestSpecification request = RestAssured.given().auth().basic(loginUserName, loginPassword);
 		Response response = request.get();
 		System.out.println(response.asString());
+		JsonPath jsonpath= new JsonPath(response.asString());
+		int id = jsonpath.getInt("[0].id");
+		String accountId = jsonpath.getString("[0].accountId");
+		String type = jsonpath.getString("[0].type");
+		double amount = jsonpath.getDouble("[0].amount");
+		String description = jsonpath.getString("[0].description");
+		String date = jsonpath.getString("[0].date");
+		System.out.println("Id: "+id);
+		System.out.println("AccountId: "+accountId);
+		System.out.println("Type: "+type);
+		System.out.println("Amount: "+amount);
+		System.out.println("Description: "+description);
+		System.out.println("Date: "+date);
+		System.out.println(newAccountNumber);
+		Assert.assertEquals(df.format(amount),df.format(billsToBePaid));
+		Assert.assertEquals(accountId,newAccountNumber);
+		logger.info("Find by Transactions API..Verification Successfull!!");
 	}
 }

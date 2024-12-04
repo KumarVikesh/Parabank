@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 04 12:14:37 IST 2024</td>
+<td>Started on:</td><td>Wed Dec 04 17:55:12 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>70 seconds (70218 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5308 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyFindTransactionsAPI()'><b>verifyFindTransactionsAPI</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [401]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.parabank.testcases.TC_RegisterCustomerTest.verifyFindTransactionsAPI(TC_RegisterCustomerTest.java:193)
+<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyTransactionDetailsByAmountAPI()'><b>verifyTransactionDetailsByAmountAPI</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: userName cannot be null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:46)
+	at com.parabank.testcases.TC_RegisterCustomerTest.verifyTransactionDetailsByAmountAPI(TC_RegisterCustomerTest.java:188)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -114,16 +123,25 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace948849701", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace948849701'><pre>java.lang.AssertionError: expected [200] but found [401]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.parabank.testcases.TC_RegisterCustomerTest.verifyFindTransactionsAPI(TC_RegisterCustomerTest.java:193)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1744190758", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1744190758'><pre>java.lang.IllegalArgumentException: userName cannot be null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:46)
+	at com.parabank.testcases.TC_RegisterCustomerTest.verifyTransactionDetailsByAmountAPI(TC_RegisterCustomerTest.java:188)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -153,57 +171,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>5</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyInitialAccountDetails()'><b>verifyInitialAccountDetails</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>3</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyFundsTransfer()'><b>verifyFundsTransfer</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>8</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyBillPayment()'><b>verifyBillPayment</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>11</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyAppLaunch()'><b>verifyAppLaunch</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>7</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyLogOut()'><b>verifyLogOut</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>1</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyOpenNewAccount()'><b>verifyOpenNewAccount</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>12</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyRegistration()'><b>verifyRegistration</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest<br>Parameters: Vikesh, Kumar, Birpur, Begusarai, Bihar, 851101, 1234567890, 1, vikesh115, Vikesh@123, Vikesh@123, 0</td>
-<td></td>
-<td>8</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
-<tr>
-<td title='com.parabank.testcases.TC_RegisterCustomerTest.verifyLogin()'><b>verifyLogin</b><br>Test class: com.parabank.testcases.TC_RegisterCustomerTest</td>
-<td></td>
-<td>4</td>
-<td>com.parabank.testcases.TC_RegisterCustomerTest@79207381</td></tr>
+<td>0</td>
+<td>com.parabank.testcases.TC_RegisterCustomerTest@4b520ea8</td></tr>
 </table><p>
 </body>
 </html>

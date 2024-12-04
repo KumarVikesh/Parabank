@@ -20,7 +20,9 @@ import com.parabank.pageobject.ParaRegisterPage;
 import com.parabank.pageobject.ParaTransferFundsPage;
 import com.parabank.utilities.ReadExcelData;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import com.parabank.utilities.ConvertCurrencyToDouble;
 
@@ -177,5 +179,14 @@ public class TC_RegisterCustomerTest extends BaseClass{
 		Thread.sleep(3000);
 		Assert.assertEquals(paraAccountOverviewPage.getAccountBalance(newAccountNumber),"$"+df.format(newAccountCurrentBalance));
 		logger.info("Bill Payment Successfull");
+	}
+	
+	@Test(priority = 9)
+	public void verifyTransactionDetailsByAmountAPI()
+	{
+		RestAssured.baseURI = "https://parabank.parasoft.com/parabank/services_proxy/bank/accounts/"+newAccountNumber+"/transactions/amount/"+billsToBePaid+"";
+		RequestSpecification request = RestAssured.given().auth().basic(loginUserName, loginPassword);
+		Response response = request.get();
+		System.out.println(response.asString());
 	}
 }

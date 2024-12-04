@@ -6,8 +6,8 @@
       <class name="com.parabank.testcases.TC_RegisterCustomerTest">
         <methods>
           <include name="setup"/>
+          <include name="verifyTransactionDetailsByAmountAPI"/>
           <include name="tearDown"/>
-          <include name="verifyFindTransactionsAPI"/>
         </methods>
       </class> <!-- com.parabank.testcases.TC_RegisterCustomerTest -->
     </classes>

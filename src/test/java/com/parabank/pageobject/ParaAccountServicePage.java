@@ -30,6 +30,9 @@ public class ParaAccountServicePage {
 	@FindBy(xpath="//a[contains(text(),'Bill Pay')]")
 	WebElement payBillLink;
 	
+	@FindBy(xpath="//a[contains(text(),'Find Transactions')]")
+	WebElement findTransactionsLink;
+	
 	@FindBy(xpath="//div[@id='rightPanel']//h1")
 	WebElement registrationCompletionMessage;
 	

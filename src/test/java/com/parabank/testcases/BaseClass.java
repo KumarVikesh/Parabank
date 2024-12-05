@@ -64,17 +64,16 @@ public class BaseClass {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.close();
 		driver.quit();
 	}
 	
-	/*public void captureScreenShot(WebDriver driver, String testName) throws IOException
+	public void captureScreenShot(WebDriver driver, String testName) throws IOException
 	{
 		TakesScreenshot screenshot = ((TakesScreenshot)driver);
 		
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
-		File dest = new File(System.getProperty("user.dir"+"//Screenshot//" + testName + ".png"));
+		File dest = new File(System.getProperty("user.dir"+"//Screenshots//" + testName + ".png"));
 		
 		FileUtils.copyFile(src, dest);
-	}*/
+	}
 } 

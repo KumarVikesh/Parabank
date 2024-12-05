@@ -1,13 +1,7 @@
 package com.parabank.utilities;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -21,27 +15,25 @@ public class ReadExcelData {
 	 public static XSSFWorkbook workbook;
 	 public static XSSFSheet worksheet;
 	 public static DataFormatter formatter= new DataFormatter();
-	 //public static String file_location = "E:\\Amazon\\Eshikshakosh\\data\\CustomerDetails.xlsx";
 	 public static String file_location = System.getProperty("user.dir")+"\\TestData\\CustomerDetails.xlsx";
 	 static String sheetName= "Customer";
-	//
-	public static Object[][] readExcel() throws IOException, InvalidFormatException
-	{
-		//FileInputStream fileInputStream= new FileInputStream(file_location); //Excel sheet file location get mentioned here
-		workbook = new XSSFWorkbook (new File(file_location)); //get my workbook 
-		worksheet=workbook.getSheet(sheetName);// get my sheet from workbook
-		XSSFRow Row=worksheet.getRow(0);   //get my Row which start from 0   
+	
+	 public static Object[][] readExcel() throws IOException, InvalidFormatException
+	 {
+		workbook = new XSSFWorkbook (new File(file_location)); 
+		worksheet=workbook.getSheet(sheetName);
+		XSSFRow Row=worksheet.getRow(0);
 		   
-		     int RowNum = worksheet.getPhysicalNumberOfRows();// count my number of Rows
-		     int ColNum= Row.getLastCellNum(); // get last ColNum 
+		     int RowNum = worksheet.getPhysicalNumberOfRows();
+		     int ColNum= Row.getLastCellNum();  
 		     
-		     Object Data[][]= new Object[RowNum-1][ColNum]; // pass my  count data in array
+		     Object Data[][]= new Object[RowNum-1][ColNum];
 		     
-		     for(int i=0; i<RowNum-1; i++) //Loop work for Rows
+		     for(int i=0; i<RowNum-1; i++)
 		     {  
 		          XSSFRow row= worksheet.getRow(i+1);
 		     
-		          for (int j=0; j<ColNum; j++) //Loop work for colNum
+		          for (int j=0; j<ColNum; j++)
 		          {
 		        	  if(row==null)
 		        		  Data[i][j]= "";
@@ -49,11 +41,11 @@ public class ReadExcelData {
 		        	  {
 		        		  XSSFCell cell= row.getCell(j);
 		        		  if(cell==null)
-		        			  Data[i][j]= ""; //if it get Null value it pass no data 
+		        			  Data[i][j]= ""; 
 		        		  else
 		        		  {
 		        			  String value=formatter.formatCellValue(cell);
-		        			  Data[i][j]=value; //This formatter get my all values as string i.e integer, float all type data value
+		        			  Data[i][j]=value;
 		        		  }
 		        	  }
 		          }

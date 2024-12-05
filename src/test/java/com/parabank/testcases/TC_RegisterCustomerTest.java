@@ -23,6 +23,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import com.parabank.utilities.ConvertCurrencyToDouble;
+import com.parabank.utilities.GenerateRandomNumber;
 
 public class TC_RegisterCustomerTest extends BaseClass{
 
@@ -58,7 +59,7 @@ public class TC_RegisterCustomerTest extends BaseClass{
 	public void verifyRegistration(String firstName,String lastName,String address1,String city,String state,String zipCode,
 			String phoneNumber,String SSN,String userName,String password,String repeatPassword,String isRegistered) throws InterruptedException
 	{
-		
+		String uName = "vikesh"+GenerateRandomNumber.getRandomNumber();
 		paraHomePage.clickOnRegisterLink();
 		paraRegisterPage = new ParaRegisterPage(driver);
 		paraRegisterPage.enterFirstName(firstName);
@@ -69,15 +70,15 @@ public class TC_RegisterCustomerTest extends BaseClass{
 		paraRegisterPage.enterZipCode(zipCode);
 		paraRegisterPage.enterPhoneNumber(phoneNumber);
 		paraRegisterPage.enterSSN(SSN);
-		paraRegisterPage.enterUserName(userName);
+		paraRegisterPage.enterUserName(uName);
 		paraRegisterPage.enterPassword(password);
 		paraRegisterPage.enterRepeatPassword(repeatPassword);
 		paraRegisterPage.clickOnRegister();
 		paraAccountServicePage = new ParaAccountServicePage(driver);
-		Assert.assertEquals(paraAccountServicePage.getRegistrationCompletionMessage(),"Welcome "+userName);
+		Assert.assertEquals(paraAccountServicePage.getRegistrationCompletionMessage(),"Welcome "+uName);
 		logger.info("Registration SuccessFull");
 		Thread.sleep(4000);
-		loginUserName = userName;
+		loginUserName = uName;
 		loginPassword = password;
 	}
 	

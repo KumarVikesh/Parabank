@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-05T07:33:21 IST" name="Suite" finished-at="2024-12-05T07:34:39 IST" duration-ms="78511">
+  <suite started-at="2024-12-05T07:48:31 IST" name="Suite" finished-at="2024-12-05T07:49:43 IST" duration-ms="71833">
     <groups>
     </groups>
-    <test started-at="2024-12-05T07:33:21 IST" name="Test" finished-at="2024-12-05T07:34:39 IST" duration-ms="78511">
+    <test started-at="2024-12-05T07:48:31 IST" name="Test" finished-at="2024-12-05T07:49:43 IST" duration-ms="71833">
       <class name="com.parabank.testcases.TC_RegisterCustomerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:21 IST" name="setup" finished-at="2024-12-05T07:33:29 IST" duration-ms="7555" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:48:31 IST" name="setup" finished-at="2024-12-05T07:48:36 IST" duration-ms="4240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAppLaunch()[pri:1, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:29 IST" name="verifyAppLaunch" finished-at="2024-12-05T07:33:38 IST" duration-ms="9249" status="PASS">
+        <test-method signature="verifyAppLaunch()[pri:1, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:48:36 IST" name="verifyAppLaunch" finished-at="2024-12-05T07:48:44 IST" duration-ms="8239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAppLaunch -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:40 IST" name="verifyRegistration" data-provider="customer-data" finished-at="2024-12-05T07:33:48 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyAppLaunch" duration-ms="8325" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:48:46 IST" name="verifyRegistration" data-provider="customer-data" finished-at="2024-12-05T07:48:55 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyAppLaunch" duration-ms="9046" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -81,35 +81,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method signature="verifyLogOut()[pri:3, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:48 IST" name="verifyLogOut" finished-at="2024-12-05T07:33:50 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyRegistration" duration-ms="1792" status="PASS">
+        <test-method signature="verifyLogOut()[pri:3, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:48:55 IST" name="verifyLogOut" finished-at="2024-12-05T07:48:57 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyRegistration" duration-ms="2155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogOut -->
-        <test-method signature="verifyLogin()[pri:4, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:50 IST" name="verifyLogin" finished-at="2024-12-05T07:33:55 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyRegistration" duration-ms="4856" status="PASS">
+        <test-method signature="verifyLogin()[pri:4, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:48:57 IST" name="verifyLogin" finished-at="2024-12-05T07:49:01 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyRegistration" duration-ms="3785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyInitialAccountDetails()[pri:5, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:55 IST" name="verifyInitialAccountDetails" finished-at="2024-12-05T07:33:58 IST" duration-ms="3036" status="PASS">
+        <test-method signature="verifyInitialAccountDetails()[pri:5, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:01 IST" name="verifyInitialAccountDetails" finished-at="2024-12-05T07:49:04 IST" duration-ms="2821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInitialAccountDetails -->
-        <test-method signature="verifyOpenNewAccount()[pri:6, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:33:58 IST" name="verifyOpenNewAccount" finished-at="2024-12-05T07:34:09 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyLogin" duration-ms="11488" status="PASS">
+        <test-method signature="verifyOpenNewAccount()[pri:6, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:04 IST" name="verifyOpenNewAccount" finished-at="2024-12-05T07:49:16 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyLogin" duration-ms="11974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOpenNewAccount -->
-        <test-method signature="verifyFundsTransfer()[pri:7, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:34:09 IST" name="verifyFundsTransfer" finished-at="2024-12-05T07:34:17 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyOpenNewAccount" duration-ms="7410" status="PASS">
+        <test-method signature="verifyFundsTransfer()[pri:7, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:16 IST" name="verifyFundsTransfer" finished-at="2024-12-05T07:49:24 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyOpenNewAccount" duration-ms="8294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFundsTransfer -->
-        <test-method signature="verifyBillPayment()[pri:8, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:34:17 IST" name="verifyBillPayment" finished-at="2024-12-05T07:34:27 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyLogin" duration-ms="9859" status="PASS">
+        <test-method signature="verifyBillPayment()[pri:8, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:24 IST" name="verifyBillPayment" finished-at="2024-12-05T07:49:34 IST" depends-on-methods="com.parabank.testcases.TC_RegisterCustomerTest.verifyLogin" duration-ms="10704" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBillPayment -->
-        <test-method signature="verifyTransactionDetailsByAmountAPI()[pri:9, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:34:27 IST" name="verifyTransactionDetailsByAmountAPI" finished-at="2024-12-05T07:34:38 IST" duration-ms="11587" status="PASS">
+        <test-method signature="verifyTransactionDetailsByAmountAPI()[pri:9, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:34 IST" name="verifyTransactionDetailsByAmountAPI" finished-at="2024-12-05T07:49:42 IST" duration-ms="7252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionDetailsByAmountAPI -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:34:38 IST" name="tearDown" finished-at="2024-12-05T07:34:39 IST" duration-ms="994" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.parabank.testcases.TC_RegisterCustomerTest@4d14b6c2]" started-at="2024-12-05T07:49:42 IST" name="tearDown" finished-at="2024-12-05T07:49:43 IST" duration-ms="1147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
